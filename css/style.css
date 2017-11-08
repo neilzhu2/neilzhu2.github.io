@@ -349,9 +349,10 @@ small{
 /*／／／／／／／／／／／／／／／／／／／／／／／*/
 
 @media screen and (min-width: 768px){
+
 	header h1{
 	float: left;
-	padding-left: 0;
+	padding-left: -15px;
 	text-align: left;
 	}
 	
@@ -401,7 +402,5 @@ small{
 		padding-top: 42px;
 	}
 }
-
-
 
 
