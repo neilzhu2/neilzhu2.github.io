@@ -1,0 +1,310 @@
+/*header*/
+	
+header div{
+	background: white;
+}
+
+@media  screen and (max-width: 768px) {
+
+	header{
+		position: relative;
+		line-height: 50px;
+		/*padding: 10px 0;*/
+	}
+
+
+	header h1{
+		font: 54px/36px Helvetica, Arial, sans-serif;
+		font-weight: lighter;
+		text-align: center;
+	}
+
+	.about section{
+		height: 500px;
+		width: 80%;
+	}
+}
+
+/*header_nav*/
+.headerNav{
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+.headerNav ul {
+	list-style-type: none;
+	font: 24px Helvetica, Arial, sans-serif;
+}
+
+
+.headerNav li{
+	width: 30%;
+	text-align: center;
+	display: inline-block;
+}
+
+.headerNav li:active{
+	background: black;
+}
+
+li:focus{
+	border: 0.5px dotted grey;
+}
+
+
+
+/*work_section list*/
+
+section{
+	padding-top: 140px;
+}
+
+ul img{
+	width: 100%;
+}
+
+section li a{
+	position: relative;
+}
+
+.workPic{
+	-webkit-transition: all 0.5s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+    -moz-transition: all 0.5s ease-in-out; /* Firefox < 16 */
+    -ms-transition: all 0.5s ease-in-out; /* Internet Explorer */
+    -o-transition: all 0.5s ease-in-out; /* Opera < 12.1 */
+    transition: all 0.5s ease-in-out;	
+}
+
+.workPic:hover{
+	opacity: 0.25;
+	filter: alpha(opacity=25);
+	-webkit-transition: all 0.3s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+    -moz-transition: all 0.3s ease-in-out; /* Firefox < 16 */
+    -ms-transition: all 0.3s ease-in-out; /* Internet Explorer */
+    -o-transition: all 0.3s ease-in-out; /* Opera < 12.1 */
+    transition: all 0.3s ease-in-out;
+}
+
+.workName{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font: 42px "Helvetica Neue", Arial, sans-serif;	
+	transform: translate(-50%,-50%);
+}
+
+.workName:active{
+	color: white;
+}
+
+section ul{	
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.workgroup{
+	padding-bottom: 50px;
+}
+
+.workSample{
+	padding-bottom: 15px;
+}
+
+
+.workType{
+	text-align: center;
+	padding-bottom: 15px;
+	color: white;
+	background: black;
+	padding: 0;
+}
+
+
+
+
+
+
+/*footer*/
+footer{
+	text-align: center;
+	padding-top: 15px;
+}
+
+footer img{
+	height: 40px;
+	padding: 0 50px;
+}
+
+small{
+	line-height: 30px;
+}
+
+
+
+/*About*/
+/*.about img{
+	height: 30%;
+}*/
+
+.about section{
+	padding-top: 250px;
+	margin-top: 140px;
+}
+
+
+
+/*work*/
+.works h3{
+	text-align: center;
+	color:black;
+	padding-top: 40px;
+	font-weight: lighter;
+	font-size: 32px;
+}
+
+.works .intro {
+	text-align: center;
+}
+
+.works .coverImg img{
+	display: block;
+}
+
+.works .roleInfo{
+	text-align: center;
+	color: grey;
+	font-size: 10px;
+	margin-top: 10px;
+	padding-bottom: 75px;
+	display: block;
+}
+
+.works .diss h4{
+	padding-bottom: 15px;
+	font-size: 28px;
+}
+
+.works .diss h5{
+	padding-bottom: 0;
+	font-size: 22px;
+	color: grey;
+}
+
+.works .diss img{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+.works .diss .dissPart {
+	padding-bottom: 100px;
+}
+.works .diss .sub_dissPart {
+	padding-bottom: 45px;
+}
+
+.works .diss p{
+	font-size: 14px;
+}
+
+.works .explainImg{
+	font-size: 12px;
+	text-align: center;
+}
+
+.works .finalGalery{
+	width: 50%;
+}
+
+
+.workLinks{
+	margin-top: 100px;
+	margin-bottom: 45px;
+	padding-bottom: 0;
+}
+
+.workLinks .workName{
+	font-size: 14px;
+}
+
+.workLink .workGroup{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.workLinks .workPic{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.workLinks h3{
+	top: 35%;
+}
+
+.workLinks .workgroup{
+	padding-bottom: 0;
+}
+
+.workLinks .panel{
+  overflow-x:scroll;
+  width:100%;
+}
+}
+
+@media screen and (min-width: 768px){
+	header h1{
+	font: 54px/36px Helvetica, Arial, sans-serif;
+	font-weight: lighter;
+	float: left;
+	left:0;
+	}
+	
+	.headerNav{
+		margin-top: 0;
+	}
+
+	.headerNav ul a{
+		padding-top: 30px;
+		float: right;
+		font-size: 14px;
+	}
+	
+	.headerNav li{
+		border-radius: 0;
+		border: 0;
+		width: auto;
+		margin-left: 20px;
+	}
+	
+	footer img{
+		height: 25px;
+		padding: 0 10px;
+	}
+
+	section{
+		padding-top: 70px;
+	}
+
+	.works h3{
+		padding-top: 20px;
+		color:grey;
+		font-size: 36px;
+	}	
+
+	.works .explainImg{
+		font-size: 10px;
+		padding-top: 0;
+	}
+	
+
+}
+
+
+@media screen and (min-width: 1200px){
+	.headerNav ul{
+		padding-top: 42px;
+	}
+}
