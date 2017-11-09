@@ -56,29 +56,19 @@ body{
 
 /*header*/
 	
-header div{
+header{
 	background: white;
 }
 
-/*@media  screen and (max-width: 768px) {
+header ul li{
+	font-weight: lighter;
+}
 
-	header{
-		position: relative;
-		line-height: 50px;
-	}
+header .current{
+	text-transform: uppercase;
+}
 
 
-	header h1{
-		font: 54px/36px Helvetica, Arial, sans-serif;
-		font-weight: lighter;
-		text-align: center;
-	}
-
-	.about section{
-		height: 500px;
-		width: 80%;
-	}
-}*/
 
 /*header_nav*/
 /*.headerNav{
@@ -160,7 +150,7 @@ section ul{
 }
 
 .workgroup{
-	padding-bottom: 50px;
+	padding-bottom: 0;
 }
 
 .workSample{
@@ -170,6 +160,7 @@ section ul{
 
 .workType{
 	text-align: center;
+	margin-top: 50px;
 	padding-bottom: 15px;
 	color: white;
 	background: black;
@@ -313,8 +304,7 @@ small{
 
 
 	header{
-		position: relative;
-		line-height: 50px;
+		background-color: white;
 	}
 
 	header h1{

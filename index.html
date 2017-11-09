@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 	<title>Neil's Portfolio</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -8,25 +9,23 @@
 </head>
 
 <body class="container-flow">
-	<header class="row">
-		<div class="navbar-fixed-top">
+	<header class="row navbar-fixed-top bg-default">
 			<span class="col-lg-1"></span>
 			<h1 class="col-12 col-sm-6 col-lg-5">NEIL ZHU</h1>
 			<nav class="col-12 col-sm-6 col-lg-5 container headerNav">
 				<ul>
-					<li><a href="index.html" class="text-muted">Work</a></li>
+					<li><a href="index.html" class="text-muted current">Work</a></li>
 					<li><a href="about.html" class="text-muted">About</a></li>
 					<li><a href="img/Resume_LihanZhu.pdf" target="_blank" class="text-muted">Resume</a></li>
 				</ul>
 			</nav>	
-		</div>
 	</header>
 	
 	<section class="work row">
 		<span class="col-lg-1"></span>
 		<ul class="col-lg-10">
 
-			<li class="workgroup work_ux col-12" id = "work_ux">
+			<li class="workgroup work_ux col-12" >
 				<h2 class = "workType">UX</h2>
 				<div class="workSample">
 					<a href="work_ux_taskline.html">
@@ -34,7 +33,9 @@
 						<img src="work/UX/TaskLine/main.jpg" alt="TaskLine" onmouseover="hoverover(this)" onmouseout="hovernot(this)" class="workPic">
 					</a>
 				</div>
-				<span id = "WorkArch"></span>
+			</li>
+				<!-- <span id = "WorkArch"></span> -->
+			<li class="workgroup work_ux col-12" >			
 				<div class="workSample">
 					<a href="work_ux_lasercut.html" >
 						<h3 class="workName" id="Lasercut Scheduler Website"></h3>
@@ -44,7 +45,7 @@
 				<!-- <span id = "WorkArch"></span> -->
 			</li>
 
-			<li class="workgroup work_arch col-lg-12" id = "work_arch" >
+			<li class="workgroup work_arch col-12" >
 				<h2 class = "workType">Architecture</h2>
 				<div class="workSample">
 					<a href="work_arch_skyline.html" >
@@ -55,7 +56,7 @@
 				<!-- <span id = "WorkDv"></span> -->
 			</li>
 
-			<li class="workgroup work_dv col-lg-12" id = "work_dv">
+			<li class="workgroup work_dv col-12" >
 				<h2 class = "workType">Degital Visualization</h2>
 				<div class="workSample">
 					<a href="work_dv_spaceship.html" >
