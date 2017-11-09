@@ -360,6 +360,7 @@ small{
 
 	.headerNav ul{
 		padding-top: 30px;
+		padding-right: 30px;
 		float: right;
 		font-size: 14px !important;
 	}
