@@ -101,9 +101,7 @@ li:focus{
 
 /*work_section list*/
 
-section{
-	padding-top: 100px;
-}
+
 
 ul img{
 	width: 100%;
@@ -194,10 +192,6 @@ small{
 	height: 30%;
 }*/
 
-.about section{
-	padding-top: 270px;
-	margin-top: 140px;
-}
 
 
 
@@ -313,9 +307,17 @@ small{
 		text-align: center;
 	}
 
+	section{
+		padding-top: 110px;
+	}
+
 	.about section{
-		height: 500px;
+		height: 550px;
 		width: 80%;
+	}
+	
+	.about section div{
+		margin-top: 25px;
 	}
 
 	.headerNav{
@@ -383,6 +385,9 @@ small{
 		padding-top: 0;
 	}
 	
+	.about section div{
+		margin-top: 0;
+	}
 
 }
 
