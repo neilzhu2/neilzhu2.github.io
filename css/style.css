@@ -156,14 +156,6 @@ section ul{
 }
 
 
-.workType{
-	text-align: center;
-	margin-top: 50px;
-	padding-bottom: 15px;
-	color: white;
-	background: black;
-	padding: 0;
-}
 
 
 
@@ -338,6 +330,20 @@ small{
 		display: inline-block;
 	}
 
+
+	.workType{
+		text-align: center;
+		margin-top: 50px;
+		padding-bottom: 15px;
+		color: white;
+		background: black;
+		padding: 0;
+	}
+
+	.first_workType{
+		margin-top: 20px;
+	}
+
 /*／／／／／／／／／／／／／／／／／／／／／／／*/
 
 @media screen and (min-width: 768px){
@@ -389,12 +395,27 @@ small{
 		margin-top: 0;
 	}
 
+	.workType{
+		margin-top: 50px;
+	}
+	
+	.first_workType{
+		margin-top: 25px;
+	}
 }
 
 
 @media screen and (min-width: 1200px){
 	.headerNav ul{
 		padding-top: 42px;
+	}
+
+	.workType{
+		margin-top: 70px;
+	}
+
+	.first_workType{
+		margin-top: 35px;
 	}
 }
 
