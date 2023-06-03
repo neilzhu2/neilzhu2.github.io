@@ -44,6 +44,7 @@
 
 <!-- Marker-based AR -->
   <!-- NOTE: Cannot work on local server -->
+  <!-- NOTE: multiple camera can work at the same time, but if the object is defiend outside, they can appear on one marker at a time -->
   <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
   <head>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
@@ -58,8 +59,10 @@
 
       <a-marker-camera preset='kanji'></a-marker-camera>
 
-      <!-- <a-marker-camera type="pattern" url="Markers_AR/pattern-scarBnW.patt"></a-marker-camera>
-      <a-marker type="pattern" url="Markers_AR/pattern-scarBnW.patt"></a-marker> -->
+      <a-marker-camera type="pattern" url="Markers_AR/pattern-scarBnW.patt"></a-marker-camera>
+      <a-marker-camera type="pattern" url="Markers_AR/scarBnW.png"></a-marker-camera>
+      <a-marker-camera type="pattern" url="Markers_AR/beam.png"></a-marker-camera>
+      <a-marker-camera type="pattern" url="Markers_AR/taichi.png"></a-marker-camera>
 
     </a-scene>
   </body>
