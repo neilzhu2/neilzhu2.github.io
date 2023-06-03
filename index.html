@@ -18,8 +18,10 @@
 
 
 <!-- VR World with own 3D model -->
+  <!-- NOTE: A-Frame 1.2.0 has trouble with rendering sth -->
   <!-- <head>
     <script src="//aframe.io/releases/0.8.2/aframe.min.js"></script>
+
   </head>
 
   <body>
@@ -40,6 +42,7 @@
 
 
 <!-- Marker-based AR -->
+  <!-- NOTE: Cannot work on local server -->
   <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
   <head>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
@@ -51,9 +54,9 @@
   		<a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
   		<a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
   		<a-marker-camera preset='hiro'></a-marker-camera>
-      <!-- <a-marker preset='hiro'></a-marker>
+      <!-- <a-marker preset='hiro'></a-marker> -->
 
-      <a-marker-camera type="pattern" url="https://cors-anywhere.herokuapp.com/https://github.com/neilzhu2/AR-Markers/blob/main/pattern-scarBnW.patt"></a-marker-camera> -->
+      <a-marker-camera type="pattern" url="Markers_AR/pattern-beam.patt"></a-marker-camera>
 
     </a-scene>
   </body>
