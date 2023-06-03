@@ -1,13 +1,59 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<!-- Normal HTML Page -->
+  <!-- <head>
     <meta charset="utf-8">
     <title>AR Marker</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href=" css/styles.css">
   </head>
   <body>
-    <p>Hello World!</p>
-    <button type="button" name="button" id="button"> 1 </button>
+    <p id="hw">Hello World!</p>
+    <button id="button" type="button" name="button"> 1 </button>
   </body>
+
+  <script type="text/javascript" src="js/script.js"></script> -->
+
+
+
+
+<!-- VR World with own 3D model -->
+  <head>
+    <script src="//aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="tower" src="Models_3D/Tower_2.obj"></a-asset-item>
+      </a-assets>
+      <a-obj-model src="#tower" rotation="0 90 0" position="0 -40 0" color="green" scale="1 2 1"></a-obj-model>
+
+      <a-sphere id="ball" position="0 1.25 -8" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-box id="stillBox" position="-4 2 -15"  depth="2" height="4" width="0.5" color="blue" shadow></a-box>
+      <a-plane position="0 0 0" rotation="-90 0 0" scale="100 100 1" width="4" height="0" color="#7BC8A4" shadow></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-camera fov='35' zoom='1' position="0 1.6 0" ></a-camera>
+    </a-scene>
+  </body>
+
+
+<!-- Marker-based AR -->
+  <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+  <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <body style='margin : 0px; overflow: hidden;'>
+  	<a-scene embedded arjs='sourceType: webcam;'>
+
+  		<a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
+  		<a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
+  		<a-marker-camera preset='hiro'></a-marker-camera>
+      <a-marker preset='hiro'></a-marker>
+
+      <a-marker-camera type="pattern" url="https://cors-anywhere.herokuapp.com/https://github.com/neilzhu2/AR-Markers/blob/main/pattern-scarBnW.patt"></a-marker-camera>
+
+    </a-scene>
+  </body> -->
+
 </html>

@@ -1,10 +1,15 @@
-var button = document.getElementById("#button");
+var button = document.getElementById("button");
 
-console.log(button.innerHTML);
+
+console.log(button);
 
 button.addEventListener("click", ()=>{
-  // button.innerHTML += 1;
-  console.log(button.innerHTML);
+  // console.log(button.innerHTML);
+
+  // button.innerHTML = 1;
+
+  let innerNum = button.innerHTML;
+  button.innerHTML = Number(innerNum) + 1;
 })
 
 
