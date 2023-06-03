@@ -1,7 +1,6 @@
 var button = document.getElementById("button");
 
 
-console.log(button);
 
 button.addEventListener("click", ()=>{
   // console.log(button.innerHTML);
