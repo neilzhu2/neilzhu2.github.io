@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- VR World with own 3D model -->
+  <!-- NOTE: A-Frame 1.2.0 has trouble with rendering the model -->
+  <!-- Note: model should be not big -->
+  <head>
+    <script src="//aframe.io/releases/0.8.2/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="tower" src="Models_3D/Tower_2.obj"></a-asset-item>
+      </a-assets>
+      <a-obj-model src="#tower" rotation="0 90 0" position="0 -40 0" color="green" scale="1 2 1"></a-obj-model>
+
+      <a-sphere id="ball" position="0 1.25 -8" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-box id="stillBox" position="-4 2 -15"  depth="2" height="4" width="0.5" color="blue" shadow></a-box>
+      <a-plane position="0 0 0" rotation="-90 0 0" scale="100 100 1" width="4" height="0" color="#7BC8A4" shadow></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-camera fov='35' zoom='1' position="0 1.6 0" ></a-camera>
+    </a-scene>
+  </body>
+</html>
