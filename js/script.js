@@ -35,6 +35,7 @@ interactiveObjects.forEach((object) => {
    function(){
       this.setAttribute("opacity", "0.5")
       note.setAttribute("opacity", "1")
+      console.log(this);
   });
 
 })
