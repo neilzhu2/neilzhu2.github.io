@@ -19,23 +19,22 @@ const pin = document.querySelector("#pin");
 const note = document.querySelector("#note");
 
 
-interactiveObjects.forEach((object) => {
-  // object.addEventListener('mouseenter',
-  //    function(){
-  //       this.setAttribute("opacity","0.9");
-  //       console.log(this);
-  // });
-  //
-  // object.addEventListener('mouseleave',
-  //    function(){
-  //       this.setAttribute("opacity", "1");
-  // });
+// interactiveObject.forEach((object) => {
+//   object.addEventListener('mouseenter',
+//      function(){
+//         this.setAttribute("opacity","0.9");
+//         console.log(this);
+//   });
+//
+//   object.addEventListener('mouseleave',
+//      function(){
+//         this.setAttribute("opacity", "1");
+//   });
+// })
 
-  pin.addEventListener('click',
-   function(){
-      this.setAttribute("opacity", "0.5")
-      note.setAttribute("opacity", "1")
-      console.log(this);
-  });
-
-})
+pin.addEventListener('click',
+ function(){
+    this.setAttribute("opacity", "0.5")
+    note.setAttribute("opacity", "1")
+    console.log(this);
+});
