@@ -19,22 +19,23 @@ const pin = document.querySelector("#pin");
 const note = document.querySelector("#note");
 
 
-// interactiveObject.forEach((object) => {
-//   object.addEventListener('mouseenter',
-//      function(){
-//         this.setAttribute("opacity","0.9");
-//         console.log(this);
-//   });
-//
-//   object.addEventListener('mouseleave',
-//      function(){
-//         this.setAttribute("opacity", "1");
-//   });
-// })
+interactiveObjects.forEach((object) => {
+  object.addEventListener('mouseenter',
+     function(){
+        // this.setAttribute("opacity","0.9");
+        console.log("mouse enters ", this);
+  });
 
-// pin.addEventListener('click',
-//  function(){
-//     this.setAttribute("opacity", "0.5")
-//     note.setAttribute("opacity", "1")
-//     console.log(this);
-// });
+  object.addEventListener('mouseleave',
+     function(){
+        // this.setAttribute("opacity", "1");
+        console.log("mouse leaves ", this);
+  });
+})
+
+pin.addEventListener('click',
+ function(){
+    this.setAttribute("opacity", "0.5")
+    note.setAttribute("opacity", "1")
+    console.log(this);
+});
