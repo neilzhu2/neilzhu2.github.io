@@ -32,9 +32,9 @@ const note = document.querySelector("#note");
 //   });
 // })
 
-pin.addEventListener('click',
- function(){
-    this.setAttribute("opacity", "0.5")
-    note.setAttribute("opacity", "1")
-    console.log(this);
-});
+// pin.addEventListener('click',
+//  function(){
+//     this.setAttribute("opacity", "0.5")
+//     note.setAttribute("opacity", "1")
+//     console.log(this);
+// });
