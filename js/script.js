@@ -39,3 +39,10 @@ pin.addEventListener('click',
     note.setAttribute("opacity", "1")
     console.log(this);
 });
+
+note.addEventListener('click',
+ function(){
+    this.setAttribute("opacity", "0")
+    pin.setAttribute("opacity", "1")
+    console.log(this);
+});
