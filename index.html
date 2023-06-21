@@ -18,8 +18,19 @@
   		<a-marker-camera preset='hiro'  cursor="rayOrigin: mouse">
         <!-- <a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
     		<a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane> -->
-        <a-image class="interactiveObject" id="pin" src="Assets/UI_components/Pin.png" rotation="-45 0 0" position="0 0 0" ></a-image>
-        <a-image class="interactiveObject" id="note" src="Assets/UI_components/Note.png" rotation="-45 0 0" position="0 1 0" visible = "false"></a-image>
+        <a-image class="interactiveObject" id="pin" src="Assets/UI_components/Pin.png" rotation="-45 0 0" position="0 0 0" >
+          <a-animation begin="hidePin" attribute="position"  from="0 0 0" to="0 0 -0.15" dur="300" easing="easeInOutQuad" ></a-animation>
+          <a-animation begin="hidePin" attribute="opacity"  from="1" to="0.5" dur="300" easing="easeInOutQuad" ></a-animation>
+
+          <a-animation begin="showPin" attribute="position"  from="0 0 -0.15" to="0 0 0" dur="300" easing="easeInOutQuad" ></a-animation>
+          <a-animation begin="showPin" attribute="opacity"  from="0.5" to="1" dur="300" easing="easeInOutQuad" ></a-animation>
+        </a-image>
+
+        <a-image class="interactiveObject" id="note" src="Assets/UI_components/Note.png" rotation="-45 0 0" position="0 1 0" visible = "false">
+          <a-animation begin="showNote" attribute="visible"  from="false" to="true" dur="150" easing="easeInOutQuad" ></a-animation>
+
+          <a-animation begin="hideNote" attribute="visible"  from="true" to="false" dur="150" easing="easeInOutQuad" ></a-animation>
+        </a-image>
 
       </a-marker-camera>
 
