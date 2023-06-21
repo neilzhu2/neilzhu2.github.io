@@ -37,13 +37,13 @@ pin.addEventListener('click',
  function(){
     this.setAttribute("opacity", "0.5");
     this.setAttribute("position", "0 0 -0.15");
-    note.setAttribute("opacity", "1");
+    note.setAttribute("visibility", "True");
     console.log(this);
 });
 
 note.addEventListener('click',
  function(){
-    this.setAttribute("opacity", "0");
+    this.setAttribute("visibility", "False");
     pin.setAttribute("opacity", "1");
     pin.setAttribute("position", "0 0 0");
     console.log(this);
