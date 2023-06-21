@@ -48,7 +48,7 @@ note.addEventListener('click',
     // this.setAttribute("visible", false);
     // pin.setAttribute("opacity", "1");
     // pin.setAttribute("position", "0 0 0");
-    this.emit("hidePin");
+    this.emit("hideNote");
     pin.emit("hidePin");
     console.log(this);
 });
