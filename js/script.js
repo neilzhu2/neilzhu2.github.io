@@ -35,14 +35,16 @@ interactiveObjects.forEach((object) => {
 
 pin.addEventListener('click',
  function(){
-    this.setAttribute("opacity", "0.5")
-    note.setAttribute("opacity", "1")
+    this.setAttribute("opacity", "0.5");
+    this.setAttribute("position", "0 0 -0.15");
+    note.setAttribute("opacity", "1");
     console.log(this);
 });
 
 note.addEventListener('click',
  function(){
-    this.setAttribute("opacity", "0")
-    pin.setAttribute("opacity", "1")
+    this.setAttribute("opacity", "0");
+    pin.setAttribute("opacity", "1");
+    pin.setAttribute("position", "0 0 0");
     console.log(this);
 });
