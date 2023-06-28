@@ -46,12 +46,21 @@ button_CTA.addEventListener('click',
   function(){
     if (!hasStartedComment) { // meaning now the CTA is "Comment"
       this.emit("startComment");
-      input.emit("startComment");
+      inputField.emit("startComment");
       hasStartedComment = true;
+      console.log("start to leave comment");
     } else { // meaning now the CTA is "Submit"
       noteThread.emit("submitComment");
-      input.emit("submitComment");
+      inputField.emit("submitComment");
       this.emit("submitComment");
+      console.log("submit the comment");
     }
+  }
+)
+
+inputField.addEventListener('click',
+  function(){
+    this.emit("inputComment");
+    console.log("typing");
   }
 )
