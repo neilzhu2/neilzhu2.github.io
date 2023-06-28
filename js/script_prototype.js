@@ -7,12 +7,12 @@ const pin = document.querySelector("#pin");
 const commentUI = document.querySelector("#comment-ui");
 const noteThread = document.querySelector("#note-thread");
 const button_X = document.querySelector("#btn-x");
-const button_CTA = document.querySelector("#button_CTA");
+const button_CTA = document.querySelector("#btn_CTA");
 const inputField = document.querySelector("#input");
 
 var hasStartedComment = false;
 
-console.log("version 1.2")
+console.log("version 1.3")
 
 
 interactiveObjects.forEach((object) => {
