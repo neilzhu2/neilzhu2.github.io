@@ -12,7 +12,7 @@ const inputField = document.querySelector("#input");
 
 var hasStartedComment = false;
 
-console.log("version 1.3")
+console.log("version 1.4")
 
 
 interactiveObjects.forEach((object) => {
