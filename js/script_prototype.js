@@ -12,7 +12,7 @@ const inputField = document.querySelector("#input");
 
 var hasStartedComment = false;
 
-console.log("version 1.12");
+console.log("version 1.13");
 
 
 interactiveObjects.forEach((object) => {
@@ -29,7 +29,6 @@ interactiveObjects.forEach((object) => {
 
 pin.addEventListener('click',
  function(){
-    // this.setAttribute("position", "0 0 -0.15");
     this.emit("hidePin");
     commentUI.emit("showUI");
     console.log("show UI and hide pin");
@@ -37,7 +36,8 @@ pin.addEventListener('click',
 
 button_X.addEventListener('click',
  function(){
-    commentUI.emit("hideUI");
+    // commentUI.emit("hideUI");
+    commentUI.setAttribute("visible", false);
     pin.emit("showPin");
     console.log("show pin and hide UI");
 });
