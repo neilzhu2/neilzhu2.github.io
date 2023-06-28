@@ -45,14 +45,17 @@ button_X.addEventListener('click',
 button_CTA.addEventListener('click',
   function(){
     if (!hasStartedComment) { // meaning now the CTA is "Comment"
-      this.emit("startComment");
+      // this.emit("startComment");
+      this.setAttribute("src", "Assets/UI_components/Prototyping/Button_Submit.png");
       inputField.emit("startComment");
       hasStartedComment = true;
       console.log("start to leave comment");
     } else { // meaning now the CTA is "Submit"
-      noteThread.emit("submitComment");
+      // noteThread.emit("submitComment");
+      noteThread.setAttribute("src", "Assets/UI_components/Prototyping/NoteThread_after.png");
       inputField.emit("submitComment");
-      this.emit("submitComment");
+      // this.emit("submitComment");
+      this.setAttribute("src", "Assets/UI_components/Prototyping/Button_Comment.png");
       console.log("submit the comment");
     }
   }
@@ -60,7 +63,8 @@ button_CTA.addEventListener('click',
 
 inputField.addEventListener('click',
   function(){
-    this.emit("inputComment");
+    // this.emit("inputComment");
+    this.setAttribute("src", "Assets/UI_components/Prototyping/Input-Filled.png");
     console.log("typing");
   }
 )
