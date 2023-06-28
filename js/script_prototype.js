@@ -12,6 +12,8 @@ const inputField = document.querySelector("#input");
 
 var hasStartedComment = false;
 
+console.log("version 1.1")
+
 
 interactiveObjects.forEach((object) => {
   object.addEventListener('mouseenter',
