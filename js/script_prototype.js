@@ -16,7 +16,13 @@
 const interactiveObjects = document.querySelectorAll(".interactiveObject");
 
 const pin = document.querySelector("#pin");
-const note = document.querySelector("#note");
+const commentUI = document.querySelector("#comment-ui");
+const noteThread = document.querySelector("#note-thread");
+const button_X = document.querySelector("#btn-x");
+const button_CTA = document.querySelector("#button_CTA");
+const inputField = document.querySelector("#input");
+
+var hasStartedComment = false;
 
 
 interactiveObjects.forEach((object) => {
@@ -34,15 +40,28 @@ interactiveObjects.forEach((object) => {
 pin.addEventListener('click',
  function(){
     // this.setAttribute("position", "0 0 -0.15");
-    // note.setAttribute("visible", true);
     this.emit("hidePin");
-    note.emit("showNote");
-    console.log(this);
+    commentUI.emit("showUI");
+    console.log("show UI and hide pin");
 });
 
-note.addEventListener('click',
+button_X.addEventListener('click',
  function(){
-    this.emit("hideNote");
+    commentUI.emit("hideUI");
     pin.emit("showPin");
-    console.log(this);
+    console.log("show pin and hide UI");
 });
+
+button_CTA.addEventListener('click',
+  function(){
+    if (!hasStartedComment) { // meaning now the CTA is "Comment"
+      this.emit("startComment");
+      input.emit("startComment");
+      hasStartedComment = true;
+    } else { // meaning now the CTA is "Submit"
+      noteThread.emit("submitComment");
+      input.emit("submitComment");
+      this.emit("submitComment");
+    }
+  }
+)
