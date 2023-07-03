@@ -13,10 +13,13 @@
   <body style='margin : 0px; overflow: hidden;'>
   	<!-- <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'> -->
 
-     <a-scene> <!--try debugging not in VR -->
+     <!--try debugging not in AR -->
+     <a-scene>
+       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+       <a-sky color="#ECECEC"></a-sky>
+       <a-entity camera="active: true" look-controls wasd-controls position="0 -1 0" rotation="-45 0 0"></a-entity>
+     <!--End of try debugging not in AR -->
 
-       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> <!--try debugging not in VR -->
-       <a-sky color="#ECECEC"></a-sky><!--try debugging not in VR -->
 
 
   		<!-- <a-marker-camera preset='hiro'  cursor="rayOrigin: mouse"> -->
