@@ -25,8 +25,10 @@
           <a-animation begin="showPin" attribute="opacity"  from="0.5" to="1" dur="300" easing="ease-in-out" ></a-animation>
         </a-image>
 
+        <a-box position="0 0 0" color="red"></a-box> <!--try debugging not in VR -->
+
         <a-entity class="interactiveObject" id="comment-ui" rotation="-45 0 0" opacity = "0" visible="false" scale="2 2 2">
-          <!-- deine the interaction of the whole -->
+          <!-- define the interaction of the whole -->
             <a-animation begin="showUI" attribute="visible"  from=false to=true></a-animation>
             <a-animation begin="hideUI" attribute="visible"  from=true to=false ></a-animation>
 
