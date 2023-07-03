@@ -15,17 +15,17 @@ var hasStartedComment = false;
 console.log("version 1.17");
 
 
-interactiveObjects.forEach((object) => {
-  object.addEventListener('mouseenter',
-     function(){
-        console.log("mouse enters ", this);
-  });
-
-  object.addEventListener('mouseleave',
-     function(){
-        console.log("mouse leaves ", this);
-  });
-})
+// interactiveObjects.forEach((object) => {
+//   object.addEventListener('mouseenter',
+//      function(){
+//         console.log("mouse enters ", this);
+//   });
+//
+//   object.addEventListener('mouseleave',
+//      function(){
+//         console.log("mouse leaves ", this);
+//   });
+// })
 
 pin.addEventListener('click',
  function(){
@@ -40,6 +40,18 @@ button_X.addEventListener('click',
     commentUI.setAttribute("visible", false);
     pin.emit("showPin");
     console.log("show pin and hide UI");
+});
+
+button_X.setAttribute("fill", "red");
+
+button_X.addEventListener('mouseenter',
+   function(){
+      console.log("mouse enters ", this);
+});
+
+button_X.addEventListener('mouseleave',
+   function(){
+      console.log("mouse leaves ", this);
 });
 
 button_CTA.addEventListener('click',
