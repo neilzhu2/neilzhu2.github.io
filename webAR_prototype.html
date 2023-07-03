@@ -15,6 +15,9 @@
 
      <a-scene> <!--try debugging not in VR -->
 
+       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> <!--try debugging not in VR -->
+       <a-sky color="#ECECEC"></a-sky><!--try debugging not in VR -->
+
 
   		<!-- <a-marker-camera preset='hiro'  cursor="rayOrigin: mouse"> -->
         <a-image class="interactiveObject" id="pin" src="Assets/UI_components/Pin.png" rotation="-45 0 0" position="0 0 0" >
@@ -25,14 +28,13 @@
           <a-animation begin="showPin" attribute="opacity"  from="0.5" to="1" dur="300" easing="ease-in-out" ></a-animation>
         </a-image>
 
-        <a-box position="0 0 0" color="red"></a-box> <!--try debugging not in VR -->
+
 
         <a-entity class="interactiveObject" id="comment-ui" rotation="-45 0 0" opacity = "0" visible="false" scale="2 2 2">
-          <!-- define the interaction of the whole -->
             <a-animation begin="showUI" attribute="visible"  from=false to=true></a-animation>
             <a-animation begin="hideUI" attribute="visible"  from=true to=false ></a-animation>
 
-          <!-- define the compoennts in this entity -->
+
             <a-image class="interactiveObject" id="note-thread" src="Assets/UI_components/Prototyping/NoteThread_before.png"  position="0 2 0" scale="2 2 1">
             </a-image>
 
@@ -49,10 +51,6 @@
             </a-image>
 
         </a-entity>
-
-        <a-sky color="#ECECEC"></a-sky><!--try debugging not in VR -->
-
-
       <!-- </a-marker-camera> -->
 
 
