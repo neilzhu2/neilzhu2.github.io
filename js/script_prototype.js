@@ -57,7 +57,7 @@ button_X.addEventListener('mouseleave',
 button_CTA.addEventListener('click',
   function(){
     if (!hasStartedComment) { // meaning now the CTA is "Comment"
-      // this.emit("startComment");
+      this.emit("startComment");
       this.setAttribute("src", "Assets/UI_components/Prototyping/Button_Submit.png");
       inputField.emit("startComment");
       hasStartedComment = true;
@@ -66,7 +66,7 @@ button_CTA.addEventListener('click',
       // noteThread.emit("submitComment");
       noteThread.setAttribute("src", "Assets/UI_components/Prototyping/NoteThread_after.png");
       inputField.emit("submitComment");
-      // this.emit("submitComment");
+      this.emit("submitComment");
       this.setAttribute("src", "Assets/UI_components/Prototyping/Button_Comment.png");
       console.log("submit the comment");
     }
