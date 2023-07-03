@@ -14,7 +14,7 @@
   	<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'>
 
 
-  		<a-marker-camera preset='hiro'  cursor="rayOrigin: mouse">
+  		<!-- <a-marker-camera preset='hiro'  cursor="rayOrigin: mouse"> -->
         <a-image class="interactiveObject" id="pin" src="Assets/UI_components/Pin.png" rotation="-45 0 0" position="0 0 0" >
           <a-animation begin="hidePin" attribute="position"  from="0 0 0" to="0 0 -0.15" dur="300" easing="ease-in-out" ></a-animation>
           <a-animation begin="hidePin" attribute="opacity"  from="1" to="0.5" dur="300" easing="ease-in-out" ></a-animation>
@@ -54,8 +54,7 @@
         </a-entity>
 
 
-
-      </a-marker-camera>
+      <!-- </a-marker-camera> -->
 
 
     </a-scene>
