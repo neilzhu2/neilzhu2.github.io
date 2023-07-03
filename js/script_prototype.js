@@ -64,7 +64,8 @@ button_CTA.addEventListener('click',
       console.log("start to leave comment");
     } else { // meaning now the CTA is "Submit"
       // noteThread.emit("submitComment");
-      noteThread.setAttribute("scale", "2 2 452/384");
+      let threadNoteHeight = 2 * 452/384;
+      noteThread.setAttribute("scale", `2 ${threadNoteHeight} 1`;);
       noteThread.setAttribute("src", "Assets/UI_components/Prototyping/NoteThread_after.png");
       inputField.emit("submitComment");
       this.emit("submitComment");
