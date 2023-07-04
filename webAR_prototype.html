@@ -9,6 +9,10 @@
   <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-click-drag-component"></script>
+    <script>
+      registerAframeClickDragComponent(window.AFRAME);
+    </script>
   </head>
   <body style='margin : 0px; overflow: hidden;'>
 
@@ -28,7 +32,7 @@
 
 
   		<a-marker-camera preset='hiro'  cursor="rayOrigin: mouse">
-        <a-image class="interactiveObject" id="pin" src="Assets/UI_components/Pin.png" rotation="-45 0 0" position="0 0 0" >
+        <a-image click-drag class="interactiveObject" id="pin" src="Assets/UI_components/Pin.png" rotation="-45 0 0" position="0 0 0" >
           <a-animation begin="hidePin" attribute="position"  from="0 0 0" to="0 0 -0.15" dur="300" easing="ease-in-out" ></a-animation>
           <a-animation begin="hidePin" attribute="opacity"  from="1" to="0.5" dur="300" easing="ease-in-out" ></a-animation>
 
@@ -43,19 +47,19 @@
             <a-animation begin="hideUI" attribute="visible"  from=true to=false ></a-animation>
 
 
-            <a-image class="interactiveObject" id="note-thread" src="Assets/UI_components/Prototyping/NoteThread_before.png"  position="0 2 -0.1" scale="2 2 1">
+            <a-image click-drag class="interactiveObject" id="note-thread" src="Assets/UI_components/Prototyping/NoteThread_before.png"  position="0 2 -0.1" scale="2 2 1">
             </a-image>
 
-            <a-image class="interactiveObject" id="btn-x" src="Assets/UI_components/Prototyping/Button_X.png"  position="1.2 1.2 0" scale="0.3 0.3 0.1">
+            <a-image click-drag class="interactiveObject" id="btn-x" src="Assets/UI_components/Prototyping/Button_X.png"  position="1.2 1.2 0" scale="0.3 0.3 0.1">
             </a-image>
 
-            <a-image class="interactiveObject" id="btn-cta" src="Assets/UI_components/Prototyping/Button_Comment.png"  position="0.5 0.8 0.1"  scale="0.6 0.3 1">
+            <a-image click-drag class="interactiveObject" id="btn-cta" src="Assets/UI_components/Prototyping/Button_Comment.png"  position="0.5 0.8 0.1"  scale="0.6 0.3 1">
               <a-animation begin="startComment" attribute="position"  from="0.5 0.8 0.1" to="1 0.8 0.1" dur="300" easing="ease-in-out" ></a-animation>
               <a-animation begin="submitComment" attribute="position"  from="1 0.8 0.1" to="0.5 0.8 0.1" dur="300" easing="ease-in-out" ></a-animation>
             </a-image>
 
 
-            <a-image class="interactiveObject" id="input" src="Assets/UI_components/Prototyping/Input-Unfilled.png"  position="-0.5 0.8 0" opacity = "0" scale="2.5 0.4 2">
+            <a-image click-drag class="interactiveObject" id="input" src="Assets/UI_components/Prototyping/Input-Unfilled.png"  position="-0.5 0.8 0" opacity = "0" scale="2.5 0.4 2">
               <a-animation begin="startComment" attribute="opacity"  from="0" to="1" dur="300" easing="ease-in-out" ></a-animation>
               <a-animation begin="submitComment" attribute="opacity"  from="1" to="0" dur="300" easing="ease-in-out" ></a-animation>
             </a-image>
