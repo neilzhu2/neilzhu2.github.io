@@ -10,7 +10,8 @@ const button_X = document.querySelector("#btn-x");
 const button_CTA = document.querySelector("#btn-cta");
 const inputField = document.querySelector("#input");
 
-const reset = document.querySelector("#reset");
+// const reset = document.querySelector("#reset");
+const text = document.querySelector("#text");
 
 var hasStartedComment = false;
 
@@ -29,18 +30,19 @@ console.log("version 1.23");
 //   });
 // })
 
-reset.addEventListener('click',
-  function(){
-    commentUI.setAttribute("visible", false);
-    pin.emit("showPin");
-    console.log("RESET");
-});
+// reset.addEventListener('click',
+//   function(){
+//     commentUI.setAttribute("visible", false);
+//     pin.emit("showPin");
+//     console.log("RESET");
+// });
 
 pin.addEventListener('click',
  function(){
     this.emit("hidePin");
     commentUI.emit("showUI");
     console.log("show UI and hide pin");
+    text.setAttribute("value", "pin clicked");
 });
 
 button_X.addEventListener('click',
@@ -49,17 +51,8 @@ button_X.addEventListener('click',
     commentUI.setAttribute("visible", false);
     pin.emit("showPin");
     console.log("show pin and hide UI");
+    text.setAttribute("value", "X clicked");
 });
-
-// button_X.addEventListener('mouseenter',
-//    function(){
-//       console.log("mouse enters ", this);
-// });
-//
-// button_X.addEventListener('mouseleave',
-//    function(){
-//       console.log("mouse leaves ", this);
-// });
 
 button_CTA.addEventListener('click',
   function(){
@@ -69,6 +62,7 @@ button_CTA.addEventListener('click',
       inputField.emit("startComment");
       hasStartedComment = true;
       console.log("start to leave comment");
+      text.setAttribute("value", "comment started");
     } else { // meaning now the CTA is "Submit"
       // noteThread.emit("submitComment");
       let threadNoteHeight = 2 * 452/384;
@@ -80,6 +74,7 @@ button_CTA.addEventListener('click',
       this.emit("submitComment");
       this.setAttribute("src", "Assets/UI_components/Prototyping/Button_Comment.png");
       console.log("submit the comment");
+      text.setAttribute("value", "comment submitted");
     }
   }
 )
@@ -89,5 +84,6 @@ inputField.addEventListener('click',
     // this.emit("inputComment");
     this.setAttribute("src", "Assets/UI_components/Prototyping/Input-Filled.png");
     console.log("typing");
+    text.setAttribute("value", "comment typed");
   }
 )
