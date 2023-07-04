@@ -15,7 +15,7 @@ const text = document.querySelector("#text");
 
 var hasStartedComment = false;
 
-console.log("version 1.23");
+console.log("version 1.25");
 
 
 // interactiveObjects.forEach((object) => {
