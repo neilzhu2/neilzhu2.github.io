@@ -10,12 +10,11 @@ const button_X = document.querySelector("#btn-x");
 const button_CTA = document.querySelector("#btn-cta");
 const inputField = document.querySelector("#input");
 
-// const reset = document.querySelector("#reset");
 const text = document.querySelector("#text");
 
 var hasStartedComment = false;
 
-console.log("version 1.26");
+console.log("version 1.27");
 
 
 // interactiveObjects.forEach((object) => {
@@ -30,12 +29,6 @@ console.log("version 1.26");
 //   });
 // })
 
-// reset.addEventListener('click',
-//   function(){
-//     commentUI.setAttribute("visible", false);
-//     pin.emit("showPin");
-//     console.log("RESET");
-// });
 
 pin.addEventListener('click',
  function(){
@@ -47,7 +40,6 @@ pin.addEventListener('click',
 
 button_X.addEventListener('click',
  function(){
-    // commentUI.emit("hideUI");
     commentUI.setAttribute("visible", false);
     pin.emit("showPin");
     console.log("show pin and hide UI");
@@ -64,7 +56,6 @@ button_CTA.addEventListener('click',
       console.log("start to leave comment");
       text.setAttribute("value", "comment started");
     } else { // meaning now the CTA is "Submit"
-      // noteThread.emit("submitComment");
       let threadNoteHeight = 2 * 452/384;
       let threadNoteYAdjustment = 2 * ((452/384 - 1)/2);
       noteThread.setAttribute("scale", `2 ${threadNoteHeight} 1`);
@@ -81,7 +72,6 @@ button_CTA.addEventListener('click',
 
 inputField.addEventListener('click',
   function(){
-    // this.emit("inputComment");
     this.setAttribute("src", "Assets/UI_components/Prototyping/Input-Filled.png");
     console.log("typing");
     text.setAttribute("value", "comment typed");
