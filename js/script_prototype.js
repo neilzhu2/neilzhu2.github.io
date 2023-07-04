@@ -10,6 +10,8 @@ const button_X = document.querySelector("#btn-x");
 const button_CTA = document.querySelector("#btn-cta");
 const inputField = document.querySelector("#input");
 
+const reset = document.querySelector("#reset");
+
 var hasStartedComment = false;
 
 console.log("version 1.23");
@@ -27,6 +29,13 @@ console.log("version 1.23");
 //   });
 // })
 
+reset.addEventListener('click',
+  function(){
+    commentUI.setAttribute("visible", false);
+    pin.emit("showPin");
+    console.log("RESET");
+});
+
 pin.addEventListener('click',
  function(){
     this.emit("hidePin");
@@ -42,17 +51,15 @@ button_X.addEventListener('click',
     console.log("show pin and hide UI");
 });
 
-button_X.setAttribute("fill", "red");
-
-button_X.addEventListener('mouseenter',
-   function(){
-      console.log("mouse enters ", this);
-});
-
-button_X.addEventListener('mouseleave',
-   function(){
-      console.log("mouse leaves ", this);
-});
+// button_X.addEventListener('mouseenter',
+//    function(){
+//       console.log("mouse enters ", this);
+// });
+//
+// button_X.addEventListener('mouseleave',
+//    function(){
+//       console.log("mouse leaves ", this);
+// });
 
 button_CTA.addEventListener('click',
   function(){
