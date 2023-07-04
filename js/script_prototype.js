@@ -12,7 +12,7 @@ const inputField = document.querySelector("#input");
 
 var hasStartedComment = false;
 
-console.log("version 1.22");
+console.log("version 1.23");
 
 
 // interactiveObjects.forEach((object) => {
@@ -65,9 +65,9 @@ button_CTA.addEventListener('click',
     } else { // meaning now the CTA is "Submit"
       // noteThread.emit("submitComment");
       let threadNoteHeight = 2 * 452/384;
-      let threadNoteYAdjustment = 1.2 + 2 * ((452/384 - 1)/2);
+      let threadNoteYAdjustment = 2 * ((452/384 - 1)/2);
       noteThread.setAttribute("scale", `2 ${threadNoteHeight} 1`);
-      noteThread.setAttribute("position", `1.2 ${threadNoteYAdjustment} 0`);
+      noteThread.setAttribute("position", `0 ${2 + threadNoteYAdjustment} -0.1`);
       noteThread.setAttribute("src", "Assets/UI_components/Prototyping/NoteThread_after.png");
       inputField.emit("submitComment");
       this.emit("submitComment");
